@@ -3,25 +3,37 @@ import React from "react";
 
 function Header(props) {
   return (
-    <header class="header">
-      <div class="container">
-        <h1 class="header-logo">
-          <Link href="/" title="Jonathan Wilde" class="header-logo-link">
-            Jonathan Wilde
-          </Link>
-        </h1>
+    <header className="py-12 px-6 md:px-12 container mx-auto flex justify-between">
+      <h1>
+        <Link
+          href="/"
+          title="Jonathan Wilde"
+          className="text-transparent bg-[url(/jwilde.svg)] bg-contain bg-no-repeat bg-center w-[100px] h-[36px] block overflow-hidden hover:brightness-75"
+        >
+          Jonathan Wilde
+        </Link>
+      </h1>
 
-        <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-list-item">
-              <Link to="/">Writing</Link>
-            </li>
-            <li class="header-nav-list-item">
-              <Link to="/about.html">About</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <ul className="flex text-xl space-x-4">
+          <li>
+            <Link
+              className="underline text-jwilde-500 hover:text-jwilde-700"
+              to="/"
+            >
+              Writing
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="underline text-jwilde-500 hover:text-jwilde-700"
+              to="/page/about/"
+            >
+              About
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }

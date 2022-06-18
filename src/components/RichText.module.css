@@ -1,0 +1,65 @@
+.wrapper p {
+  margin: 1rem 0;
+}
+
+.wrapper a {
+  text-decoration: underline;
+  color: #006bc9;
+}
+
+.wrapper a:hover {
+  color: #004b8c
+}
+
+.wrapper ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.wrapper ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.wrapper ul p,
+.wrapper ol p {
+  margin: 0;
+}
+
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h6 {
+  font-weight: 800;
+  margin: 1.5em 0 0.5em;
+}
+
+.wrapper h2 {
+  font-size: 1.6rem;
+}
+
+.wrapper h3 {
+  font-size: 1.3rem;
+}
+
+.wrapper h4 {
+  font-size: 1.2rem;
+}
+
+.wrapper h5 {
+  font-size: 1.1rem;
+}
+
+.wrapper h5 {
+  font-size: 1rem;
+}
+
+.wrapper blockquote {
+  border-left: 4px solid #006bc9;
+  padding-left: 1.4rem;
+  color: #006bc9
+}

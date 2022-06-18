@@ -1,54 +1,33 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import ConvertKit from "convertkit-react";
 
 function Author(props) {
-  const { large } = props;
-
   return (
-    <div class="author">
-      <div class="author-headshot">
+    <div className={`${props.className || ""} container mx-auto px-4`}>
+      <aside class="flex flex-col md:flex-row shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500 p-6 space-x-6 items-center">
         <StaticImage
           src="../../static/jwilde-headshot.jpg"
-          class="author-headshot-img"
+          class="rounded-full max-w-[250px]"
         />
-      </div>
-      <div class="author-main">
-        <h3 class="author-name">Jonathan Wilde</h3>
-        <p class="author-bio">
-          Engineer thinking{" "}
-          <a href="https://twitter.com/hellojwilde">and tweeting</a> about
-          software, networks, and cities. Loves Caltrain more than Joe Biden
-          loves Amtrak.{" "}
-        </p>
 
-        <form
-          action="https://feedburner.google.com/fb/a/mailverify"
-          method="post"
-          target="popupwindow"
-          onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=Speedbreeze', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"
-          class="author-subscribe"
-        >
-          <input
-            type="text"
-            class="author-subscribe-input"
-            name="email"
-            placeholder="Enter your email..."
-          />
-          <input type="hidden" value="Speedbreeze" name="uri" />
-          <input type="hidden" name="loc" value="en_US" />
-          <input
-            type="submit"
-            class="author-subscribe-button"
-            value="Subscribe"
-          />
-          <p class="author-subscribe-delivery">
-            Delivered by{" "}
-            <a href="https://feedburner.google.com" target="_blank">
-              FeedBurner
-            </a>
+        <div className="flex flex-col justify-center">
+          <h3 class="text-2xl font-bold">Jonathan Wilde</h3>
+          <p class="text-xl">
+            Engineer thinking{" "}
+            <a href="https://twitter.com/hellojwilde">and tweeting</a> about
+            software, networks, and cities. Loves Caltrain more than Joe Biden
+            loves Amtrak.{" "}
           </p>
-        </form>
-      </div>
+
+          <ConvertKit
+            formId={3332155}
+            template="clare"
+            hideName={true}
+            className="mt-4 "
+          />
+        </div>
+      </aside>
     </div>
   );
 }
