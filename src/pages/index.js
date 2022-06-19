@@ -3,12 +3,14 @@ import React from "react";
 import Author from "../components/Author";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Seo from "../components/Seo";
 
 const IndexPage = (props) => {
   const posts = props.data.allContentfulBlogPost.nodes;
 
   return (
     <div>
+      <Seo />
       <Header />
       <main>
         <Author />

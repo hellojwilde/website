@@ -4,12 +4,14 @@ import Author from "../components/Author";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RichText from "../components/RichText";
+import Seo from "../components/Seo";
 
 function BlogPostTemplate(props) {
   const post = props.data.contentfulBlogPost;
 
   return (
     <div>
+      <Seo title={post.title} description={post.subtitle} />
       <Header />
       <main className="container mx-auto px-6 md:px-12">
         <h2 className="text-4xl lg:text-6xl font-bold text-center mt-6">

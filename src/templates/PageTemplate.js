@@ -3,12 +3,14 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RichText from "../components/RichText";
+import Seo from "../components/Seo";
 
 function PageTemplate(props) {
   const page = props.data.contentfulPage;
 
   return (
     <div>
+      <Seo title={page.title} description={page.subtitle} />
       <Header />
       <main className="container mx-auto px-6 md:px-12">
         <h2 className="text-3xl font-bold">{page.title}</h2>
