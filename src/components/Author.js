@@ -5,15 +5,18 @@ import React from "react";
 function Author(props) {
   return (
     <div
-      className={`${props.className || ""} container mx-auto pl-4 pr-2 md:px-4`}
+      className={`${props.className || ""} container mx-auto pl-6 pr-4 md:px-4`}
     >
       <aside class="flex flex-col bg-white md:flex-row shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500 p-6 md:space-x-6 items-center">
         <StaticImage
           src="../../static/jwilde-headshot.jpg"
-          class="rounded-full max-w-[250px]"
+          className="max-w-[175px] md:max-w-[300px]"
+          width={300}
+          height={300}
+          imgClassName="rounded-full"
         />
 
-        <div className="mt-6 md:mt-0 flex flex-col justify-center">
+        <div className="mt-6 md:mt-0 flex flex-col justify-center text-center md:text-left">
           <h3 class="text-2xl font-bold">Need practical privacy strategies?</h3>
           <p className="text-xl mt-2">
             Jonathan Wilde leads privacy engineering work that makes products

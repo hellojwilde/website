@@ -21,8 +21,8 @@ function BlogPostTemplate(props) {
       />
       <Header />
       <main>
-        <div className="container mx-auto px-2">
-          <h2 className="text-3xl lg:text-5xl font-bold text-center mt-6">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center md:mt-6">
             <Link
               to={canonical}
               className="text-jwilde-500 hover:text-jwilde-700"
@@ -38,7 +38,7 @@ function BlogPostTemplate(props) {
             <span className="flex items-center justify-center space-x-2">
               <StaticImage
                 src="../../static/jwilde-headshot.jpg"
-                class="rounded-full"
+                imgClassName="rounded-full"
                 width={32}
                 height={32}
               />
@@ -55,7 +55,7 @@ function BlogPostTemplate(props) {
         </div>
 
         {post.heroImage && (
-          <div className="container mx-auto mt-6 md:mt-12 pl-4 pr-2 md:px-4">
+          <div className="container mx-auto mt-6 md:mt-8 pl-6 pr-4 md:px-4">
             <GatsbyImage
               className="shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
               image={post.heroImage.gatsbyImageData}
@@ -64,7 +64,7 @@ function BlogPostTemplate(props) {
           </div>
         )}
 
-        <div className="container mx-auto mt-6 px-6 md:px-12">
+        <div className="container mx-auto mt-6 md:mt-8 px-6 md:px-12">
           <RichText value={post.body} className="text-xl mt-6 md:mt-12" />
         </div>
       </main>
