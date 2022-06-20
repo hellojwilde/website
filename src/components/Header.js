@@ -26,7 +26,7 @@ function Header(props) {
           </li>
           <li>
             <Link
-              className="rounded-lg py-3 px-4 bg-jwilde-300 text-jwilde-700 hover:text-white hover:bg-jwilde-500"
+              className="rounded-lg border-2 border-jwilde-300 py-2.5 px-4 bg-jwilde-300 text-jwilde-800 hover:border-jwilde-500 hover:text-white hover:bg-jwilde-500"
               to="/subscribe/"
             >
               Subscribe
