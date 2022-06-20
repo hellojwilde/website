@@ -17,7 +17,7 @@ const RichTextOptions = {
               href={`https://youtube.com/watch?v=${target.videoId}`}
               target="_blank"
               rel="noreferrer"
-              className="no-underline group aspect-video bg-cover bg-center flex items-center justify-center"
+              className="my-6 no-underline group aspect-video bg-cover bg-center flex items-center justify-center shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
               style={{
                 backgroundImage: `url(https://img.youtube.com/vi/${target.videoId}/0.jpg)`,
               }}
@@ -41,7 +41,7 @@ const RichTextOptions = {
           );
         case "ContentfulTweet":
           return (
-            <div className="bg-jwilde-300 rounded-2xl px-8 py-4">
+            <div className="my-6 px-8 py-4 shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500">
               <p className="font-bold">{target.author}</p>
               <RichText value={target.body} />
               <p>
