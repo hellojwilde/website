@@ -3,7 +3,7 @@ require("dotenv").config({
 });
 
 const SITE_URL = `https://jwilde.me`;
-const NOINDEX_PATHS = [];
+const NOINDEX_PATHS = [`/utils/640db535/`];
 
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
