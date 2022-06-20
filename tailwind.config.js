@@ -1,16 +1,17 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  important: true,
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
       sm: "640px",
       md: "768px",
-      lg: "1080px",
+      lg: "960px",
     },
     extend: {
       fontFamily: {
-        sans: ["proxima-nova", ...defaultTheme.fontFamily.sans],
+        sans: ["metropolis", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         jwilde: {

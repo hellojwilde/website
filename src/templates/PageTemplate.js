@@ -7,10 +7,11 @@ import Seo from "../components/Seo";
 
 function PageTemplate(props) {
   const page = props.data.contentfulPage;
+  const canonical = `/page/${page.slug}/`;
 
   return (
     <div>
-      <Seo title={page.title} description={page.subtitle} />
+      <Seo title={page.title} description={page.subtitle} path={canonical} />
       <Header />
       <main className="container mx-auto px-6 md:px-12">
         <h2 className="text-3xl font-bold">{page.title}</h2>

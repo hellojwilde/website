@@ -8,15 +8,16 @@ import Seo from "../components/Seo";
 
 function BlogPostTemplate(props) {
   const post = props.data.contentfulBlogPost;
+  const canonical = `/blog/${post.urlDate}/${post.slug}/`;
 
   return (
     <div>
-      <Seo title={post.title} description={post.subtitle} />
+      <Seo title={post.title} description={post.subtitle} path={canonical} />
       <Header />
       <main className="container mx-auto px-6 md:px-12">
-        <h2 className="text-4xl lg:text-6xl font-bold text-center mt-6">
+        <h2 className="text-3xl lg:text-5xl font-bold text-center mt-6">
           <Link
-            to={`/blog/${post.urlDate}/${post.slug}/`}
+            to={canonical}
             className="text-jwilde-500 hover:text-jwilde-700"
           >
             {post.title}
@@ -55,14 +56,16 @@ export const blogPostQuery = graphql`
           ... on ContentfulTweet {
             contentful_id
             __typename
-            blockquote {
-              blockquote
+            body {
+              raw
             }
+            author
+            url
           }
           ... on ContentfulVideo {
             contentful_id
             __typename
-            url
+            videoId
           }
         }
       }

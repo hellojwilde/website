@@ -2,7 +2,6 @@ import React from "react";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { GatsbyImage } from "gatsby-plugin-image";
-import ReactPlayer from "react-player";
 
 import * as RichTextStyles from "./RichText.module.css";
 
@@ -14,20 +13,31 @@ const RichTextOptions = {
       switch (target.__typename) {
         case "ContentfulVideo":
           return (
-            <div className="aspect-video">
-              <ReactPlayer
-                url={target.url}
-                controls={true}
-                width="100%"
-                height="100%"
-              />
-            </div>
+            <a
+              href={`https://youtube.com/watch?v=${target.videoId}`}
+              target="_blank"
+              rel="noreferrer"
+              className="no-underline group aspect-video bg-cover bg-center flex items-center justify-center"
+              style={{
+                backgroundImage: `url(https://img.youtube.com/vi/${target.videoId}/0.jpg)`,
+              }}
+            >
+              <span className="block no-underline bg-jwilde-500 group-hover:bg-jwilde-700 text-white font-bold px-8 py-4 rounded-xl text-2xl">
+                Play Video
+              </span>
+            </a>
           );
         case "ContentfulTweet":
           return (
-            <div
-              dangerouslySetInnerHTML={{ __html: target.blockquote.blockquote }}
-            />
+            <div className="bg-jwilde-300 rounded-2xl px-8 py-4">
+              <p className="font-bold">{target.author}</p>
+              <RichText value={target.body} />
+              <p>
+                <a href={target.url} target="_blank" rel="noreferrer">
+                  Read on Twitter
+                </a>
+              </p>
+            </div>
           );
         default:
           throw new Error(`Invalid target ${target.__typename}`);

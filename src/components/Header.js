@@ -19,17 +19,17 @@ function Header(props) {
           <li>
             <Link
               className="underline text-jwilde-500 hover:text-jwilde-700"
-              to="/"
+              to="/page/about/"
             >
-              Writing
+              About
             </Link>
           </li>
           <li>
             <Link
-              className="underline text-jwilde-500 hover:text-jwilde-700"
-              to="/page/about/"
+              className="rounded-lg py-3 px-4 bg-jwilde-300 text-jwilde-700 hover:text-white hover:bg-jwilde-500"
+              to="/subscribe/"
             >
-              About
+              Subscribe
             </Link>
           </li>
         </ul>

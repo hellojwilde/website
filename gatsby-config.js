@@ -12,12 +12,6 @@ const contentfulConfig = {
     process.env.CONTENTFUL_DELIVERY_TOKEN,
 };
 
-const webFontConfig = {
-  typekit: {
-    id: process.env.TYPEKIT_ID,
-  },
-};
-
 const sitemapConfig = {
   query: `
     {
@@ -69,7 +63,7 @@ module.exports = {
   siteMetadata: {
     title: `Jonathan Wilde`,
     description:
-      "I help tech companies improve products by honoring privacy and keeping people safe.",
+      "Jonathan Wilde leads privacy engineering teams that make products better for users—and writes about it.",
     siteUrl: SITE_URL,
     social: {
       twitter: "@hellojwilde",
@@ -80,17 +74,12 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: webFontConfig,
-    },
     { resolve: "gatsby-plugin-sitemap", options: sitemapConfig },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
-    "gatsby-plugin-twitter",
     "gatsby-plugin-gatsby-cloud",
   ],
 };

@@ -10,7 +10,7 @@ const IndexPage = (props) => {
 
   return (
     <div>
-      <Seo />
+      <Seo path="/" />
       <Header />
       <main>
         <Author />

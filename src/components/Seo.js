@@ -8,7 +8,6 @@ const Seo = ({
   meta = [],
   title,
   image,
-  linkedData = null,
   path = null,
   script = [],
 }) => {
@@ -32,7 +31,21 @@ const Seo = ({
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
 
-  const link = [];
+  const link = [
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/favicon-32x32.png",
+      sizes: "32x32",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/favicon-16x16.png",
+      sizes: "16x16",
+    },
+  ];
+
   if (path != null) {
     const canonical = `${site.siteMetadata.siteUrl}${path}`;
     meta.push({
@@ -99,6 +112,10 @@ const Seo = ({
         {
           name: `twitter:image`,
           content: image,
+        },
+        {
+          name: `twitter:dnt`,
+          content: "on",
         },
       ].concat(meta)}
     >
