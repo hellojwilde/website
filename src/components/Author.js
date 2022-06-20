@@ -22,8 +22,8 @@ function Author(props) {
           </h3>
           <p className="text-xl mt-2">
             Jonathan Wilde makes data privacy attainable, practical, and
-            valuable for companies large and small&mdash;and writes about it.
-            Don't miss a post.
+            valuable for fast-moving companies large and small. Don't miss a
+            post.
           </p>
           <form
             action="https://app.convertkit.com/forms/3332155/subscriptions"
