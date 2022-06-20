@@ -16,7 +16,7 @@ function Author(props) {
         <div className="mt-6 md:mt-0 flex flex-col justify-center">
           <h3 class="text-2xl font-bold">Need practical privacy strategies?</h3>
           <p className="text-xl mt-2">
-            Jonathan Wilde leads privacy engineering teams that make products
+            Jonathan Wilde leads privacy engineering work that makes products
             better for users&mdash;and writes about it. Don't miss a post.
           </p>
           <form

@@ -63,7 +63,7 @@ module.exports = {
   siteMetadata: {
     title: `Jonathan Wilde`,
     description:
-      "Jonathan Wilde leads privacy engineering teams that make products better for users—and writes about it.",
+      "Jonathan Wilde leads privacy engineering work that makes products better for users—and writes about it.",
     siteUrl: SITE_URL,
     social: {
       twitter: "@hellojwilde",

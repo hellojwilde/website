@@ -1,8 +1,7 @@
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import React from "react";
 import Author from "../components/Author";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Seo from "../components/Seo";
 
 const SubscribePage = (props) => {
