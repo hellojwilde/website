@@ -75,7 +75,7 @@ const Seo = ({
         },
         {
           name: `image`,
-          content: image,
+          content: image && `${site.siteMetadata.siteUrl}${image}`,
         },
         {
           property: `og:title`,
@@ -91,7 +91,7 @@ const Seo = ({
         },
         {
           property: `og:image`,
-          content: image,
+          content: image && `${site.siteMetadata.siteUrl}${image}`,
         },
         {
           name: `twitter:card`,
@@ -111,7 +111,7 @@ const Seo = ({
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: image && `${site.siteMetadata.siteUrl}${image}`,
         },
       ].concat(meta)}
     >
