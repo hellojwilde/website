@@ -57,7 +57,12 @@ function BlogPostTemplate(props) {
         {post.heroImage && (
           <div className="container mx-auto mt-6 md:mt-8 pl-6 pr-4 md:px-4">
             <GatsbyImage
-              className="shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
+              className="md:hidden shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
+              image={post.heroImage.smallGatsbyImageData}
+              alt={post.title}
+            />
+            <GatsbyImage
+              className="hidden md:block shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
               image={post.heroImage.gatsbyImageData}
               alt={post.title}
             />
@@ -92,6 +97,12 @@ export const blogPostQuery = graphql`
           layout: FULL_WIDTH
           placeholder: BLURRED
           width: 1280
+          height: 480
+        )
+        smallGatsbyImageData: gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          width: 720
           height: 480
         )
       }
