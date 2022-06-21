@@ -85,7 +85,7 @@ export const blogPostQuery = graphql`
       urlDate: publishDate(formatString: "YYYY/MM/DD")
       publishDate(formatString: "dddd, MMMM D, YYYY")
       heroImage {
-        resize(height: 630, width: 1200) {
+        resize(height: 600, width: 1200) {
           src
         }
         gatsbyImageData(

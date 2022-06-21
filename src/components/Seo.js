@@ -113,10 +113,6 @@ const Seo = ({
           name: `twitter:image`,
           content: image,
         },
-        {
-          name: `twitter:dnt`,
-          content: "on",
-        },
       ].concat(meta)}
     >
       <script type="application/ld+json">
