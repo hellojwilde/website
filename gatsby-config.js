@@ -80,6 +80,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
-    "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-netlify",
   ],
 };
