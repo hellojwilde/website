@@ -15,7 +15,7 @@ const IndexPage = (props) => {
       <main>
         <header className="container mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl font-bold">Archive</h2>
-          <p className="text-slate-500">
+          <p className="text-lg text-slate-500">
             I've been blogging since 2008, and archived some of my older posts.
           </p>
         </header>
