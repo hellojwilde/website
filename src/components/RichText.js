@@ -5,6 +5,36 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import * as RichTextStyles from "./RichText.module.css";
 
+function Video(props) {
+  return (
+    <a
+      href={`https://youtube.com/watch?v=${props.videoId}`}
+      target="_blank"
+      rel="noreferrer"
+      className="my-6 no-underline group aspect-video bg-cover bg-center flex items-center justify-center shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
+      style={{
+        backgroundImage: `url(https://img.youtube.com/vi/${props.videoId}/0.jpg)`,
+      }}
+    >
+      <span className="block no-underline bg-jwilde-500 group-hover:bg-jwilde-700 text-white font-bold px-8 py-4 rounded-xl text-2xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-7 w-7 inline"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+            clipRule="evenodd"
+          />
+        </svg>{" "}
+        Play Video
+      </span>
+    </a>
+  );
+}
+
 const RichTextOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
@@ -12,33 +42,7 @@ const RichTextOptions = {
 
       switch (target.__typename) {
         case "ContentfulVideo":
-          return (
-            <a
-              href={`https://youtube.com/watch?v=${target.videoId}`}
-              target="_blank"
-              rel="noreferrer"
-              className="my-6 no-underline group aspect-video bg-cover bg-center flex items-center justify-center shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
-              style={{
-                backgroundImage: `url(https://img.youtube.com/vi/${target.videoId}/0.jpg)`,
-              }}
-            >
-              <span className="block no-underline bg-jwilde-500 group-hover:bg-jwilde-700 text-white font-bold px-8 py-4 rounded-xl text-2xl">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7 inline"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                    clipRule="evenodd"
-                  />
-                </svg>{" "}
-                Play Video
-              </span>
-            </a>
-          );
+          return <Video videoId={target.videoId} />;
         case "ContentfulTweet":
           return (
             <div className="my-6 px-8 py-4 shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500">

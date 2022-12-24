@@ -13,7 +13,12 @@ const IndexPage = (props) => {
       <Seo path="/" />
       <Header />
       <main>
-        <Author />
+        <header className="container mx-auto px-6 md:px-12 text-center">
+          <h2 className="text-3xl font-bold">Archive</h2>
+          <p className="text-slate-500">
+            I've been blogging since 2008, and archived some of my older posts.
+          </p>
+        </header>
 
         <div className="container mx-auto px-6 md:px-12 mt-12 space-y-6 flex flex-col">
           {posts.map((post) => (
@@ -32,23 +37,6 @@ const IndexPage = (props) => {
           ))}
         </div>
       </main>
-
-      <div className="mt-12 mx-auto px-4 container">
-        <aside className="p-8 border-t-2 text-center">
-          <p className="text-slate-500">
-            I've been blogging since 2008, and archived some of my older posts.
-          </p>
-          <p className="mt-4">
-            <Link
-              className="rounded-lg border-2 border-slate-300 py-2.5 px-4 bg-slate-300 text-slate-800 hover:border-jwilde-500 hover:text-white hover:bg-jwilde-500"
-              to="/archive/"
-            >
-              View the Archives
-            </Link>
-          </p>
-        </aside>
-      </div>
-
       <Footer />
     </div>
   );
@@ -60,7 +48,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allContentfulBlogPost(
       sort: { publishDate: DESC }
-      filter: { isArchived: { eq: false } }
+      filter: { isArchived: { eq: true } }
     ) {
       nodes {
         title
