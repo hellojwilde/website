@@ -15,7 +15,7 @@ function PageTemplate(props) {
       <Header />
       <main className="container mx-auto px-6 md:px-12">
         <header className="text-center">
-          <h2 className="text-3xl font-bold text-center">{page.title}</h2>
+          <h2 className="text-3xl font-bold">{page.title}</h2>
           {page.subtitle && (
             <p className="text-lg text-slate-500">{page.subtitle}</p>
           )}
