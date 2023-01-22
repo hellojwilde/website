@@ -7,6 +7,9 @@
   "keywords": [
     "gatsby"
   ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "overrides": {
     "lmdb": "2.6.0"
   },
@@ -19,7 +22,6 @@
   },
   "dependencies": {
     "@fontsource/metropolis": "^4.5.3",
-    "@fontsource/montserrat": "^4.5.11",
     "autoprefixer": "^10.4.7",
     "dotenv": "^16.0.1",
     "gatsby": "^5.3.3",

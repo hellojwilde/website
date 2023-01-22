@@ -1,0 +1,8 @@
+[[plugins]]
+package = "@netlify/plugin-gatsby"
+
+[[redirects]]
+  from = "/e/*"
+  to = "https://app.posthog.com/:splat"
+  status = 200
+  force = true

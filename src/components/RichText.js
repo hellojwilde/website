@@ -42,7 +42,12 @@ const RichTextOptions = {
 
       switch (target.__typename) {
         case "ContentfulVideo":
-          return <Video videoId={target.videoId} />;
+          return (
+            <Video
+              videoId={target.videoId}
+              className="my-10 shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-slate-500"
+            />
+          );
         case "ContentfulTweet":
           return (
             <div className="my-6 px-8 py-4 shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500">
@@ -63,7 +68,12 @@ const RichTextOptions = {
       const target = node.data.target;
       switch (target.__typename) {
         case "ContentfulAsset":
-          return <GatsbyImage image={target.gatsbyImageData} />;
+          return (
+            <GatsbyImage
+              image={target.gatsbyImageData}
+              className="my-10 shadow-[#64748B_-10px_10px_0_-3px] border-4 border-slate-500"
+            />
+          );
         default:
           throw new Error(`Invalid target ${target.__typename}`);
       }

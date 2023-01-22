@@ -71,6 +71,18 @@ function BlogPostTemplate(props) {
 
         <div className="container mx-auto mt-6 md:mt-8 px-6 md:px-12">
           <RichText value={post.body} className="text-xl mt-6 md:mt-12" />
+
+          <div className="bg-slate-200 p-6">
+            As always: This cannot and does not contain Legal advice.
+            Accordingly, before taking any actions based upon such information,
+            we encourage you to consult with the appropriate professionals. The
+            use or reliance of any information contained on this site is solely
+            at your own risk. See{" "}
+            <Link className="underline" to="/page/disclaimer">
+              Disclaimer
+            </Link>{" "}
+            for details.
+          </div>
         </div>
       </main>
       <Author className="mt-12" />
@@ -103,7 +115,7 @@ export const blogPostQuery = graphql`
           layout: FULL_WIDTH
           placeholder: BLURRED
           width: 720
-          height: 480
+          height: 320
         )
       }
       body {
