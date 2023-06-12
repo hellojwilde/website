@@ -8,8 +8,8 @@ const shouldRunAnalytics =
   !document.cookie.includes("is_own_device");
 
 if (shouldRunAnalytics) {
-  posthog.init("phc_FiE4M3UP7J2MU9sACzX46IZBLXNPVEfGQBK7g5Pitzb", {
-    api_host: "https://jwilde.me/e",
+  posthog.init("phc_52rwKAIVnTES7bZwGbOI7lUn2qHzG7PBfo9vKWGIj60", {
+    api_host: "https://realworldprivacy.com/e",
     persistence: "memory",
     disable_persistence: true,
   });
