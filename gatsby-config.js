@@ -61,12 +61,12 @@ const sitemapConfig = {
 
 module.exports = {
   siteMetadata: {
-    title: `Jonathan Wilde`,
+    title: `Real World Privacy | Jonathan Wilde`,
     description:
       "Jonathan Wilde makes data privacy attainable, practical, and valuable for fast-moving companies, large and small.",
     siteUrl: SITE_URL,
     social: {
-      twitter: "@hellojwilde",
+      twitter: "@rwprivacy",
     },
   },
   plugins: [
