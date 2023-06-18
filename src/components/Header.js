@@ -7,10 +7,10 @@ function Header(props) {
       <h1>
         <Link
           href="/"
-          title="Jonathan Wilde"
-          className="text-transparent bg-[url(/jwilde.svg)] bg-contain bg-no-repeat bg-center w-[100px] h-[36px] block overflow-hidden hover:brightness-75"
+          title="Real World Privacy"
+          className="text-transparent bg-[url(/logo.svg)] hover:bg-[url(/logo-highlight.svg)] bg-contain bg-no-repeat bg-center w-[235px] h-[33px] block overflow-hidden hover:brightness-75"
         >
-          Jonathan Wilde
+          Real World Privacy
         </Link>
       </h1>
 
