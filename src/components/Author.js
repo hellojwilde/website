@@ -18,7 +18,7 @@ function Author(props) {
 
         <div className="mt-6 md:mt-0 flex flex-col justify-center text-center md:text-left">
           <h3 class="text-2xl font-bold">
-            Need real-world privacy strategies?
+            Need real world privacy strategies?
           </h3>
           <p className="text-xl mt-2">
             Jonathan Wilde makes data privacy attainable, practical, and
