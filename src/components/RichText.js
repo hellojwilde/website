@@ -4,32 +4,26 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import * as RichTextStyles from "./RichText.module.css";
+import { PlayCircleIcon } from "@heroicons/react/24/solid";
 
 function Video(props) {
+  const { className, videoId, ...otherProps } = props;
+
   return (
     <a
-      href={`https://youtube.com/watch?v=${props.videoId}`}
+      href={`https://youtube.com/watch?v=${videoId}`}
       target="_blank"
       rel="noreferrer"
-      className="my-6 no-underline group aspect-video bg-cover bg-center flex items-center justify-center shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
+      className={`my-6 no-underline group aspect-video bg-cover bg-center flex items-center justify-center ${
+        className || ""
+      }`}
       style={{
-        backgroundImage: `url(https://img.youtube.com/vi/${props.videoId}/0.jpg)`,
+        backgroundImage: `url(https://img.youtube.com/vi/${videoId}/0.jpg)`,
       }}
+      {...otherProps}
     >
-      <span className="block no-underline bg-jwilde-500 group-hover:bg-jwilde-700 text-white font-bold px-8 py-4 rounded-xl text-2xl">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-7 w-7 inline"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-            clipRule="evenodd"
-          />
-        </svg>{" "}
-        Play Video
+      <span className="block no-underline bg-gradient-to-br from-[#0E55BF] to-[#A1177B] group-hover:brightness-75 group-active:brightness-50 transition-all text-white font-bold px-8 py-4 rounded-xl text-2xl shadow">
+        <PlayCircleIcon className="h-7 w-7 inline" /> Play Video
       </span>
     </a>
   );
@@ -45,12 +39,12 @@ const RichTextOptions = {
           return (
             <Video
               videoId={target.videoId}
-              className="my-10 shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-slate-500"
+              className="my-10 border-4 border-slate-600"
             />
           );
         case "ContentfulTweet":
           return (
-            <div className="my-6 px-8 py-4 shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500">
+            <div className="my-6 px-8 py-4 border-4 border-slate-600">
               <p className="font-bold">{target.author}</p>
               <RichText value={target.body} />
               <p>
@@ -71,7 +65,7 @@ const RichTextOptions = {
           return (
             <GatsbyImage
               image={target.gatsbyImageData}
-              className="my-10 shadow-[#64748B_-10px_10px_0_-3px] border-4 border-slate-600"
+              className="my-10 border-4 border-slate-600"
             />
           );
         default:

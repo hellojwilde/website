@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 function Header(props) {
   return (
-    <header className="py-6 md:py-12 px-6 container mx-auto flex justify-between">
+    <header className="py-8 md:py-12 px-6 container mx-auto flex justify-between">
       <Logo />
       <Nav>
         <li>

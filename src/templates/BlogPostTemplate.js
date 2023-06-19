@@ -69,7 +69,7 @@ function BlogPostTemplate(props) {
           </Callout>
         )}
 
-        <div className="container mx-auto mt-8 px-6 md:px-12">
+        <div className="container mx-auto mt-8 px-6 md:px-20">
           <RichText
             value={post.body}
             className="text-lg md:text-xl mt-6 md:mt-12"

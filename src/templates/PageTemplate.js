@@ -10,7 +10,7 @@ import { StaticImage } from "gatsby-plugin-image";
 function PageDefaultLayout(props) {
   const page = props.page;
   return (
-    <main className="container mx-auto px-6 md:px-12">
+    <main className="container mx-auto px-6 md:px-20">
       <header className="text-center">
         <h2 className="text-3xl font-bold">{page.title}</h2>
         {page.subtitle && (
@@ -37,7 +37,7 @@ function PageAboutLayout(props) {
           />
         </header>
 
-        <RichText value={page.body} className="text-xl mt-6" />
+        <RichText value={page.body} className="text-lg md:text-xl mt-6" />
       </article>
       <Author className="mt-12" />
     </main>
