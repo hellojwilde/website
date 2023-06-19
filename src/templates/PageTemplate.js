@@ -26,7 +26,7 @@ function PageAboutLayout(props) {
   const page = props.page;
   return (
     <main>
-      <article className="container mx-auto px-6 md:px-12">
+      <article className="container mx-auto px-6 md:px-20">
         <header className="text-center py-6 md:py-0">
           <StaticImage
             src="../../static/jwilde-headshot.jpg"
