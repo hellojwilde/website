@@ -27,7 +27,7 @@ function PageAboutLayout(props) {
   return (
     <main>
       <article className="container mx-auto px-6 md:px-12">
-        <header className="text-center">
+        <header className="text-center py-6 md:py-0">
           <StaticImage
             src="../../static/jwilde-headshot.jpg"
             className="max-w-[175px] md:max-w-[300px]"

@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import Author from "../components/Author";
 import Footer from "../components/Footer";

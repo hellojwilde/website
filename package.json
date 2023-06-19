@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@fontsource/metropolis": "^4.5.3",
+    "@heroicons/react": "^2.0.18",
     "autoprefixer": "^10.4.7",
     "dotenv": "^16.0.1",
     "gatsby": "^5.3.3",
