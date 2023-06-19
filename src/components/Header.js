@@ -1,18 +1,11 @@
 import { Link } from "gatsby";
 import React from "react";
+import Logo from "./Logo";
 
 function Header(props) {
   return (
     <header className="py-12 px-6 md:px-12 container mx-auto flex justify-between">
-      <h1>
-        <Link
-          href="/"
-          title="Real World Privacy"
-          className="text-transparent bg-[url(/logo.svg)] hover:bg-[url(/logo-highlight.svg)] bg-contain bg-no-repeat bg-center w-[235px] h-[33px] block overflow-hidden hover:brightness-75"
-        >
-          Real World Privacy
-        </Link>
-      </h1>
+      <Logo />
 
       <nav>
         <ul className="flex text-xl space-x-4">
