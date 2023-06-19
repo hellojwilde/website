@@ -18,7 +18,7 @@ function Header(props) {
         </li>
         <li>
           <Link
-            className="text-xl text-slate-800 rounded-lg py-2.5 md:py-3.5 px-5 font-bold bg-gradient-to-br from-sky-400 to-violet-400 text-center hover:brightness-75 active:brightness-50 transition-all"
+            className="text-xl text-white rounded-lg py-2.5 md:py-3.5 px-5 font-bold bg-gradient-to-br from-[#0E55BF] to-[#A1177B] text-center hover:brightness-75 active:brightness-50 transition-all"
             to="/subscribe/"
           >
             Subscribe

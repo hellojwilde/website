@@ -9,7 +9,7 @@ function Callout(props) {
       className={`${className || ""} container mx-auto pl-6 pr-4 md:px-4 `}
     >
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-purple-400 transform translate-y-2 -translate-x-2"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#4B8CEF] to-[#F86FD1] transform translate-y-2 -translate-x-2"></div>
         <aside
           className={`${
             innerClassName || ""

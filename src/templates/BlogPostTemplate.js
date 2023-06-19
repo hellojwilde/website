@@ -44,7 +44,7 @@ function BlogPostTemplate(props) {
               />
               <Link
                 to="/page/about/"
-                className="underline text-sky-600 hover:text-sky-700 active:text-sky-800 transition-colors"
+                className="underline text-jwilde-500 hover:text-jwilde-700 active:text-jwilde-800 transition-colors"
               >
                 Jonathan Wilde
               </Link>

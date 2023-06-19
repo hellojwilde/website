@@ -4,7 +4,7 @@
 
 .wrapper a {
   text-decoration: underline;
-  color: rgb(2 132 199);
+  color: #006bc9;
   transition-property: color, background-color, border-color,
     text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

@@ -39,7 +39,7 @@ function Author(props) {
           />
           <button
             type="submit"
-            className="text-xl text-slate-800 bg-gradient-to-br from-sky-400 to-violet-400 text-center hover:brightness-75 active:brightness-50 transition-all font-bold rounded-lg py-3 px-5"
+            className="text-xl text-white bg-gradient-to-br from-[#0E55BF] to-[#A1177B] text-center hover:brightness-75 active:brightness-50 transition-all font-bold rounded-lg py-3 px-5"
           >
             Subscribe
           </button>
