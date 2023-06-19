@@ -4,6 +4,55 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RichText from "../components/RichText";
 import Seo from "../components/Seo";
+import Author from "../components/Author";
+import { StaticImage } from "gatsby-plugin-image";
+
+function PageDefaultLayout(props) {
+  const page = props.page;
+  return (
+    <main className="container mx-auto px-6 md:px-12">
+      <header className="text-center">
+        <h2 className="text-3xl font-bold">{page.title}</h2>
+        {page.subtitle && (
+          <p className="text-lg text-slate-500">{page.subtitle}</p>
+        )}
+      </header>
+      <RichText value={page.body} className="text-xl mt-6" />
+    </main>
+  );
+}
+
+function PageAboutLayout(props) {
+  const page = props.page;
+  return (
+    <main>
+      <article className="container mx-auto px-6 md:px-12">
+        <header className="text-center">
+          <StaticImage
+            src="../../static/jwilde-headshot.jpg"
+            className="max-w-[175px] md:max-w-[300px]"
+            width={200}
+            height={200}
+            imgClassName="rounded-full"
+          />
+        </header>
+
+        <RichText value={page.body} className="text-xl mt-6" />
+      </article>
+      <Author className="mt-12" />
+    </main>
+  );
+}
+
+function PageLayout(props) {
+  const page = props.page;
+  switch (page.layout) {
+    case "about":
+      return <PageAboutLayout page={page} />;
+    default:
+      return <PageDefaultLayout page={page} />;
+  }
+}
 
 function PageTemplate(props) {
   const page = props.data.contentfulPage;
@@ -13,15 +62,7 @@ function PageTemplate(props) {
     <div>
       <Seo title={page.title} description={page.subtitle} path={canonical} />
       <Header />
-      <main className="container mx-auto px-6 md:px-12">
-        <header className="text-center">
-          <h2 className="text-3xl font-bold">{page.title}</h2>
-          {page.subtitle && (
-            <p className="text-lg text-slate-500">{page.subtitle}</p>
-          )}
-        </header>
-        <RichText value={page.body} className="text-xl mt-6" />
-      </main>
+      <PageLayout page={page} />
       <Footer />
     </div>
   );
@@ -35,6 +76,7 @@ export const pageQuery = graphql`
       slug
       title
       subtitle
+      layout
       body {
         raw
       }

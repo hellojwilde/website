@@ -18,7 +18,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "reload": "curl -X POST http://localhost:8000/__refresh"
   },
   "dependencies": {
     "@fontsource/metropolis": "^4.5.3",
