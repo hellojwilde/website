@@ -23,7 +23,7 @@ function BlogPostTemplate(props) {
       <Header />
       <main>
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl lg:text-6xl font-bold text-center mt-6 md:mt-12">
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mt-6 md:mt-12">
             <Link
               to={canonical}
               className="text-slate-700 hover:text-slate-800 active:text-slate-900 transition-colors"
@@ -31,10 +31,10 @@ function BlogPostTemplate(props) {
               {post.title}
             </Link>
           </h2>
-          <h3 className="mt-2 text-center text-2xl text-slate-500">
+          <h3 className="mt-2 text-center text-lg md:text-2xl text-slate-500">
             {post.subtitle}
           </h3>
-          <p className="mt-4 text-lg flex flex-col md:flex-row items-center justify-center md:space-x-2">
+          <p className="mt-4 md:text-lg flex flex-col md:flex-row items-center justify-center md:space-x-2">
             <span className="flex items-center justify-center space-x-2">
               <StaticImage
                 src="../../static/jwilde-headshot.jpg"
@@ -69,8 +69,11 @@ function BlogPostTemplate(props) {
           </Callout>
         )}
 
-        <div className="container mx-auto mt-6 md:mt-8 px-6 md:px-12">
-          <RichText value={post.body} className="text-xl mt-6 md:mt-12" />
+        <div className="container mx-auto mt-8 px-6 md:px-12">
+          <RichText
+            value={post.body}
+            className="text-lg md:text-xl mt-6 md:mt-12"
+          />
 
           <div className="bg-slate-200 p-6">
             As always: This cannot and does not contain Legal advice.
