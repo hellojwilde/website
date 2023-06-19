@@ -5,10 +5,13 @@ import Callout from "./Callout";
 
 function Author(props) {
   return (
-    <Callout className={props.className}>
+    <Callout
+      className={props.className}
+      innerClassName="flex flex-col md:flex-row p-6 md:space-x-6 items-center"
+    >
       <StaticImage
         src="../../static/jwilde-headshot.jpg"
-        className="max-w-[175px] md:max-w-[300px]"
+        className="max-w-[150px] md:max-w-[300px]"
         width={300}
         height={300}
         imgClassName="rounded-full"
@@ -16,7 +19,7 @@ function Author(props) {
 
       <div className="mt-6 md:mt-0 flex flex-col justify-center text-center md:text-left">
         <h3 class="text-2xl font-bold">Need real world privacy strategies?</h3>
-        <p className="text-xl mt-2">
+        <p className="md:text-xl mt-2">
           Jonathan Wilde makes data privacy attainable, practical, and valuable
           for fast-moving companies large and small. Don't miss a post.
         </p>
@@ -32,23 +35,23 @@ function Author(props) {
             placeholder="Your email"
             aria-label="Email"
             id="ck-email"
-            className="text-xl border-2 border-jwilde-300 rounded-lg p-2 flex-1"
+            className="text-xl border-2 border-slate-300 rounded-lg p-1.5 flex-1"
           />
           <button
             type="submit"
-            className="text-xl border-2 border-jwilde-500 bg-jwilde-500 hover:border-jwilde-700 hover:bg-jwilde-700 text-white font-bold rounded-lg py-2 px-4"
+            className="text-xl text-slate-800 bg-gradient-to-br from-sky-400 to-violet-400 text-center hover:brightness-75 active:brightness-50 transition-all font-bold rounded-lg py-3 px-5"
           >
             Subscribe
           </button>
         </form>
         <p className="mt-4 text-slate-500 text-sm">
-          Unsubscribe any any time. By submitting, you agree to my{" "}
-          <Link className="underline" to="/page/privacy-policy/">
-            Privacy Policy
-          </Link>{" "}
-          &amp;{" "}
+          Unsubscribe any any time. By submitting, you agree to our{" "}
           <Link className="underline" to="/page/terms-of-service/">
             Terms of Service
+          </Link>{" "}
+          &amp;{" "}
+          <Link className="underline" to="/page/privacy-policy/">
+            Privacy Policy
           </Link>
           .
         </p>

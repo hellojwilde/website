@@ -6,9 +6,9 @@ import Logo from "../components/Logo";
 
 const SubscribePage = (props) => {
   return (
-    <div className="min-h-screen flex flex-col bg-jwilde-300">
+    <div className="min-h-screen flex flex-col">
       <Seo title="Subscribe" path="/" />
-      <div className="pt-12 flex justify-center">
+      <div className="py-6 md:py-12 flex justify-center">
         <Logo />
       </div>
       <main className="flex-1 flex items-center">

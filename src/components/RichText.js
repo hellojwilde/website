@@ -71,7 +71,7 @@ const RichTextOptions = {
           return (
             <GatsbyImage
               image={target.gatsbyImageData}
-              className="my-10 shadow-[#64748B_-10px_10px_0_-3px] border-4 border-slate-500"
+              className="my-10 shadow-[#64748B_-10px_10px_0_-3px] border-4 border-slate-600"
             />
           );
         default:

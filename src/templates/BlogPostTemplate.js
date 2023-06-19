@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RichText from "../components/RichText";
 import Seo from "../components/Seo";
+import Callout from "../components/Callout";
 
 function BlogPostTemplate(props) {
   const post = props.data.contentfulBlogPost;
@@ -22,19 +23,18 @@ function BlogPostTemplate(props) {
       <Header />
       <main>
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center md:mt-6">
+          <h2 className="text-5xl lg:text-6xl font-bold text-center mt-6 md:mt-12">
             <Link
               to={canonical}
-              className="text-jwilde-500 hover:text-jwilde-700"
+              className="text-slate-700 hover:text-slate-800 active:text-slate-900 transition-colors"
             >
               {post.title}
             </Link>
           </h2>
-          <h3 className="mt-2 text-center text-xl text-slate-500">
+          <h3 className="mt-2 text-center text-2xl text-slate-500">
             {post.subtitle}
           </h3>
-          <p className="mt-2 text-center text-xl"></p>
-          <p className="text-xl flex flex-col md:flex-row items-center justify-center md:space-x-2">
+          <p className="mt-4 text-lg flex flex-col md:flex-row items-center justify-center md:space-x-2">
             <span className="flex items-center justify-center space-x-2">
               <StaticImage
                 src="../../static/jwilde-headshot.jpg"
@@ -44,7 +44,7 @@ function BlogPostTemplate(props) {
               />
               <Link
                 to="/page/about/"
-                className="underline text-jwilde-500 hover:text-jwilde-700"
+                className="underline text-sky-600 hover:text-sky-700 active:text-sky-800 transition-colors"
               >
                 Jonathan Wilde
               </Link>
@@ -55,18 +55,18 @@ function BlogPostTemplate(props) {
         </div>
 
         {post.heroImage && (
-          <div className="container mx-auto mt-6 md:mt-8 pl-6 pr-4 md:px-4">
+          <Callout className="mt-6 md:mt-8">
             <GatsbyImage
-              className="md:hidden shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
+              className="md:hidden"
               image={post.heroImage.smallGatsbyImageData}
               alt={post.title}
             />
             <GatsbyImage
-              className="hidden md:block shadow-[#006bc9_-10px_10px_0_-3px] border-4 border-jwilde-500"
+              className="hidden md:block"
               image={post.heroImage.gatsbyImageData}
               alt={post.title}
             />
-          </div>
+          </Callout>
         )}
 
         <div className="container mx-auto mt-6 md:mt-8 px-6 md:px-12">

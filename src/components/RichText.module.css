@@ -4,11 +4,19 @@
 
 .wrapper a {
   text-decoration: underline;
-  color: #006bc9;
+  color: rgb(2 132 199);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .wrapper a:hover {
-  color: #004b8c
+  color: #004b8c;
+}
+
+.wrapper a:active {
+  color: #00335e;
 }
 
 .wrapper ul {
@@ -59,7 +67,11 @@
 }
 
 .wrapper blockquote {
-  border-left: 4px solid #006bc9;
-  padding-left: 1.4rem;
-  color: #006bc9
+  background-color: rgb(71 85 105);
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.wrapper blockquote p {
+  margin: 0;
 }
