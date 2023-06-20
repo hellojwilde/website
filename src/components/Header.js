@@ -10,7 +10,23 @@ function Header(props) {
       <Nav>
         <li>
           <Link
-            className="text-xl underline text-slate-600 py-2.5 hover:text-slate-700 active-text-slate-800 transition-colors"
+            className="hover:underline text-slate-600 py-2.5 hover:text-slate-700 active-text-slate-800 transition-colors"
+            to="/page/services/"
+          >
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="hover:underline text-slate-600 py-2.5 hover:text-slate-700 active-text-slate-800 transition-colors"
+            to="/blog/"
+          >
+            Blog
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="hover:underline text-slate-600 py-2.5 hover:text-slate-700 active-text-slate-800 transition-colors"
             to="/page/about/"
           >
             About
@@ -19,9 +35,9 @@ function Header(props) {
         <li>
           <Link
             className="text-xl text-white rounded-lg py-2.5 md:py-3.5 px-5 font-bold bg-gradient-to-br from-[#0E55BF] to-[#A1177B] text-center hover:brightness-75 active:brightness-50 transition-all"
-            to="/subscribe/"
+            to="https://book.vimcal.com/p/jwilde/real-world-privacy"
           >
-            Subscribe
+            Book Call
           </Link>
         </li>
       </Nav>

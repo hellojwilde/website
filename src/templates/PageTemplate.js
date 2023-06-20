@@ -4,13 +4,14 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RichText from "../components/RichText";
 import Seo from "../components/Seo";
-import Author from "../components/Author";
+import CTASubscribe from "../components/CTASubscribe";
 import { StaticImage } from "gatsby-plugin-image";
+import CTABookCall from "../components/CTABookCall";
 
 function PageDefaultLayout(props) {
   const page = props.page;
   return (
-    <main className="container mx-auto px-6 md:px-20">
+    <main className="container mx-auto px-6">
       <header className="text-center">
         <h2 className="text-3xl font-bold">{page.title}</h2>
         {page.subtitle && (
@@ -22,15 +23,33 @@ function PageDefaultLayout(props) {
   );
 }
 
+function PageServicesLayout(props) {
+  const page = props.page;
+  return (
+    <main>
+      <article className="container mx-auto px-6">
+        <header className="text-center">
+          <h2 className="text-3xl font-bold">{page.title}</h2>
+          {page.subtitle && (
+            <p className="text-lg text-slate-500">{page.subtitle}</p>
+          )}
+        </header>
+        <RichText value={page.body} className="text-xl" />
+      </article>
+      <CTABookCall className="mt-12" />
+    </main>
+  );
+}
+
 function PageAboutLayout(props) {
   const page = props.page;
   return (
     <main>
-      <article className="container mx-auto px-6 md:px-20">
+      <article className="container mx-auto px-6">
         <header className="text-center py-6 md:py-0">
           <StaticImage
             src="../../static/jwilde-headshot.jpg"
-            className="max-w-[175px] md:max-w-[300px]"
+            className="max-w-[175px] md:max-w-[200px] mt-6"
             width={200}
             height={200}
             imgClassName="rounded-full"
@@ -39,7 +58,7 @@ function PageAboutLayout(props) {
 
         <RichText value={page.body} className="text-lg md:text-xl mt-6" />
       </article>
-      <Author className="mt-12" />
+      <CTASubscribe className="mt-12" />
     </main>
   );
 }
@@ -49,6 +68,8 @@ function PageLayout(props) {
   switch (page.layout) {
     case "about":
       return <PageAboutLayout page={page} />;
+    case "services":
+      return <PageServicesLayout page={page} />;
     default:
       return <PageDefaultLayout page={page} />;
   }

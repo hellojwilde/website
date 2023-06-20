@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import Callout from "./Callout";
 
-function Author(props) {
+function CTASubscribe(props) {
   return (
     <Callout
       className={props.className}
@@ -60,4 +60,4 @@ function Author(props) {
   );
 }
 
-export default Author;
+export default CTASubscribe;

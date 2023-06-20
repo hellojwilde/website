@@ -10,17 +10,17 @@ function Footer(props) {
         </p>
         <ul className="flex space-x-4 justify-center md:justify-end">
           <li>
-            <Link to="/page/privacy-policy/" className="underline">
+            <Link to="/page/privacy-policy/" className="hover:underline">
               Privacy
             </Link>
           </li>
           <li>
-            <Link to="/page/terms-of-service/" className="underline">
+            <Link to="/page/terms-of-service/" className="hover:underline">
               Terms
             </Link>
           </li>
           <li>
-            <Link to="/page/disclaimer/" className="underline">
+            <Link to="/page/disclaimer/" className="hover:underline">
               Disclaimer
             </Link>
           </li>

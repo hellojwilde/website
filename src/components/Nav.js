@@ -30,7 +30,7 @@ function Nav({ children }) {
           {childrenWithProps}
         </ul>
 
-        <ul className="hidden md:flex text-xl space-x-4">{children}</ul>
+        <ul className="hidden md:flex text-xl space-x-6">{children}</ul>
       </div>
     </nav>
   );

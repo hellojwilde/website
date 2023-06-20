@@ -1,7 +1,7 @@
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import Author from "../components/Author";
+import CTASubscribe from "../components/CTASubscribe";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RichText from "../components/RichText";
@@ -22,7 +22,7 @@ function BlogPostTemplate(props) {
       />
       <Header />
       <main>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <h2 className="text-4xl lg:text-6xl font-bold text-center mt-6 md:mt-12">
             <Link
               to={canonical}
@@ -69,7 +69,7 @@ function BlogPostTemplate(props) {
           </Callout>
         )}
 
-        <div className="container mx-auto mt-8 px-6 md:px-20">
+        <div className="container mx-auto mt-8 px-6">
           <RichText
             value={post.body}
             className="text-lg md:text-xl mt-6 md:mt-12"
@@ -88,7 +88,7 @@ function BlogPostTemplate(props) {
           </div>
         </div>
       </main>
-      <Author className="mt-12" />
+      <CTASubscribe className="mt-12" />
       <Footer />
     </div>
   );

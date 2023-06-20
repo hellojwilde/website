@@ -1,5 +1,5 @@
 import React from "react";
-import Author from "../components/Author";
+import CTASubscribe from "../components/CTASubscribe";
 import Footer from "../components/Footer";
 import Seo from "../components/Seo";
 import Logo from "../components/Logo";
@@ -12,7 +12,7 @@ const SubscribePage = (props) => {
         <Logo />
       </div>
       <main className="flex-1 flex items-center">
-        <Author />
+        <CTASubscribe />
       </main>
       <Footer />
     </div>
