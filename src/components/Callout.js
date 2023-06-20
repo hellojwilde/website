@@ -4,7 +4,7 @@ function Callout(props) {
   const { className, innerClassName, children, ...otherProps } = props;
 
   return (
-    <div
+    <section
       {...otherProps}
       className={`${className || ""} container mx-auto pl-6 pr-4 md:px-4 `}
     >
@@ -18,7 +18,7 @@ function Callout(props) {
           {children}
         </aside>
       </div>
-    </div>
+    </section>
   );
 }
 
