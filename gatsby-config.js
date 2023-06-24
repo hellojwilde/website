@@ -2,7 +2,7 @@ require("dotenv").config({
   path: ".env",
 });
 
-const SITE_URL = `https://jwilde.me`;
+const SITE_URL = `https://realworldprivacy.com`;
 const NOINDEX_PATHS = [`/utils/640db535/`];
 
 const contentfulConfig = {
