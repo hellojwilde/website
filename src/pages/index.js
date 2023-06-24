@@ -17,7 +17,7 @@ import CTABookCall from "../components/CTABookCall";
 const IndexPage = (props) => {
   return (
     <div>
-      <Seo path="/" title="Your Fractional Head of Privacy Engineering" />
+      <Seo path="/" title="Data Privacy Consulting" />
       <Header />
       <main>
         <section className="container mx-auto px-6 py-6 md:py-12 space-y-6 text-lg">
