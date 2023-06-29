@@ -37,7 +37,7 @@ function Header(props) {
             className="text-xl text-white rounded-lg py-2.5 md:py-3.5 px-5 font-bold bg-gradient-to-br from-[#0E55BF] to-[#A1177B] text-center hover:brightness-75 active:brightness-50 transition-all"
             to="https://forms.realworldprivacy.com/t/tBWMvUPe8Bus"
           >
-            Get Started →
+            Get in Touch →
           </Link>
         </li>
       </Nav>
