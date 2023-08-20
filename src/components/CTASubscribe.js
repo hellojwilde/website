@@ -45,7 +45,7 @@ function CTASubscribe(props) {
           </button>
         </form>
         <p className="mt-4 text-slate-500 text-sm">
-          Unsubscribe any any time. By submitting, you agree to our{" "}
+          Unsubscribe any any time. By submitting, you agree to my{" "}
           <Link className="underline" to="/page/terms-of-service/">
             Terms of Service
           </Link>{" "}

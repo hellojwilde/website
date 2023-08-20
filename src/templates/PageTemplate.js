@@ -6,7 +6,6 @@ import RichText from "../components/RichText";
 import Seo from "../components/Seo";
 import CTASubscribe from "../components/CTASubscribe";
 import { StaticImage } from "gatsby-plugin-image";
-import CTABookCall from "../components/CTABookCall";
 
 function PageDefaultLayout(props) {
   const page = props.page;
@@ -19,24 +18,6 @@ function PageDefaultLayout(props) {
         )}
       </header>
       <RichText value={page.body} className="text-xl mt-6" />
-    </main>
-  );
-}
-
-function PageServicesLayout(props) {
-  const page = props.page;
-  return (
-    <main>
-      <article className="container mx-auto px-6">
-        <header className="text-center">
-          <h2 className="text-3xl font-bold">{page.title}</h2>
-          {page.subtitle && (
-            <p className="text-lg text-slate-500">{page.subtitle}</p>
-          )}
-        </header>
-        <RichText value={page.body} className="text-xl" />
-      </article>
-      <CTABookCall className="mt-12" />
     </main>
   );
 }
@@ -68,8 +49,6 @@ function PageLayout(props) {
   switch (page.layout) {
     case "about":
       return <PageAboutLayout page={page} />;
-    case "services":
-      return <PageServicesLayout page={page} />;
     default:
       return <PageDefaultLayout page={page} />;
   }
